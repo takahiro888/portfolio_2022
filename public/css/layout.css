@@ -1,0 +1,17 @@
+.my-card-body{
+  height: calc(100vh - (55px + 48px));
+}
+/* ellipseを当てると１行になる */
+.ellipsis{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media screen and (max-width:760px){
+  /* 画面サイズが480pxからはここを読み込む */
+  .my-card-body{
+    height: auto;
+    max-width: 50vh;
+  }
+}
