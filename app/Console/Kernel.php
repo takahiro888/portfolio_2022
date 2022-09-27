@@ -1,5 +1,5 @@
 <?php
-// gittest
+
 namespace App\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
