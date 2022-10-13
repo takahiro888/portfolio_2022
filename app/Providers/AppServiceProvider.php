@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
 use App\Models\Memo;
 use App\Models\Tag;
 
@@ -25,6 +26,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Schema::defaultStringLength(191);
         //全てのメソッドが呼ばれる前に先に呼ばれるメソッド
         view()->composer('*',function($view){
             // 自分のメモ取得はMemoモデルに任せる
